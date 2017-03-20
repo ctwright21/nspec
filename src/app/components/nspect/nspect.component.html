@@ -1,0 +1,96 @@
+<div *ngIf="nspect">
+  <h2 class="page-header">{{nspect.property_name}} <small> Section {{nspect.section_num}}</small></h2>
+
+  <h4>Report Completed by {{nspect.completed_by}} on {{nspect.nspect_date}}</h4>
+
+
+  <h3>Pavement Maintenance Defects</h3>
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <h4>Pavement Sealer Wear<br /><br /> <small> Severity Score: {{nspect.pave_seal_wear_s}}</small></h4>
+      <p>Notes: {{nspect.pave_seal_wear_n}}</p>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <img style="width: 60%" class="thumbnail" src="{{imageUrl}}">
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <h4>Pavement Sealer Delamination<br /><br /> <small> Severity Score: {{nspect.pave_seal_delam_s}}</small></h4>
+      <p>Notes: {{nspect.pave_seal_delam_n}}</p>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <img style="width: 60%" class="thumbnail" src="{{imageUrl}}">
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <h4>Oil Spots<br /><br /> <small> Severity Score: {{nspect.oil_spots_s}}</small></h4>
+      <p>Notes: {{nspect.oil_spots_n}}</p>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <img style="width: 60%" class="thumbnail" src="{{imageUrl}}">
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <h4>Linear Cracks<br /><br /> <small> Severity Score: {{nspect.linear_cracks_s}}</small></h4>
+      <p>Notes: {{nspect.linear_cracks_n}}</p>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <img style="width: 60%" class="thumbnail" src="{{imageUrl}}">
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <h4>Gator Cracks<br /><br /> <small> Severity Score: {{nspect.gator_cracks_s}}</small></h4>
+      <p>Notes: {{nspect.gator_cracks_n}}</p>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <img style="width: 60%" class="thumbnail" src="{{imageUrl}}">
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <h4>Pot Holes<br /><br /> <small> Severity Score: {{nspect.pot_holes_s}}</small></h4>
+      <p>Notes: {{nspect.pot_holes_n}}</p>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <img style="width: 60%" class="thumbnail" src="{{imageUrl}}">
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <h4>Raveling<br /><br /> <small> Severity Score: {{nspect.raveling_s}}</small></h4>
+      <p>Notes: {{nspect.raveling_n}}</p>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <img style="width: 60%" class="thumbnail" src="{{imageUrl}}">
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <h4>Rutting<br /><br /> <small> Severity Score: {{nspect.rutting_s}}</small></h4>
+      <p>Notes: {{nspect.rutting_n}}</p>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <img style="width: 60%" class="thumbnail" src="{{imageUrl}}">
+    </div>
+  </div>
+  <hr>
+
+</div>

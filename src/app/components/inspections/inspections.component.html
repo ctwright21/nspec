@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-xs-4 col-sm-4 col-md-6">
+   <button class="btn btn-primary"><a [routerLink]="['/inspect']" style="color: inherit; text-decoration: none">Add nSpec Report</a></button>
+  </div>
+  <div class="col-sm-6 col-md-6">
+   <label> Filter by Property
+     <select (change)="filterProperty(filteredProperty.value)" #filteredProperty>
+       <option value="0">Select</option>
+       <option *ngFor="let nspect of nspects" value="{{nspect.property_name}}">{{nspect.property_name}}</option>
+     </select>
+   </label>
+  </div>
+</div>
+
+<div *ngIf="nspects">
+  <table id="nspecTbl">
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Section Number</th>
+        <th>Completed By</th>
+        <th>Date Completed</th>
+        <th>Manage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let nspect of nspects">
+        <td>{{nspect.property_name}}</td>
+        <td>{{nspect.section_num}}</td>
+        <td>{{nspect.completed_by}}</td>
+        <td>{{nspect.nspect_date}}</td>
+        <td>
+          <button class="btn btn-info"><a [routerLink]="['/inspect/' + nspect.$key]" style="color: inherit; text-decoration: none">View Report</a></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

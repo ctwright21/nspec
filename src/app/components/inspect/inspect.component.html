@@ -1,0 +1,173 @@
+<div *ngIf="properties">
+  <!--
+  <div class="panel col-xs-12 col-sm-12 col-md-10 ">
+    <div class="panel-heading">
+      <h3 class="panel-title">Properties in the nSpec System</h3>
+    </div>
+    <ul *ngFor="let property of properties">
+      <li>{{property.property_name}}</li>
+    </ul>
+  </div>
+-->
+
+  <div class="container">
+    <div class="col-md-12 well" id="pm_form">
+      <h2><b>nSpec Report</b></h2>
+      <form (submit)="onAddSubmit()">
+        <div class="row">
+          <div class="form-group col-sm-6 col-md-6">
+            <label class="col-form-label">Completed by: </label>
+                <input class="form-control" type="text" [(ngModel)]="completed_by" name="completed_by">
+          </div>
+
+          <div class="form-group col-xs-6 col-sm-4 col-md-3">
+            <label for="sectionnum-input" class="col-form-label">Date Completed</label>
+            <div>
+              <input class="form-control" type="date" [(ngModel)]="nspect_date" name="nspect_date" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-6 col-md-6">
+            <label class="col-form-label">Property Name:</label>
+                <input class="form-control" type="text" [(ngModel)]="property_name" name="property_name">
+          </div>
+
+          <div class="form-group col-xs-6 col-sm-4 col-md-3">
+            <label for="sectionnum-input" class="col-form-label">Property Section #</label>
+            <div>
+              <input class="form-control" type="number" placeholder="Section #" [(ngModel)]="section_num" name="section_num" required>
+            </div>
+          </div>
+        </div>
+
+        <h4><i>Pavement Maintenance Defects</i></h4>
+        <div class="row">
+          <div class="form-group">
+            <label for="pavesealwear-input" class="col-xs-12 col-sm-12 col-md-12 col-form-label">Pavement Sealer Wear</label>
+            <div class="col-xs-6 col-sm-6 col-md-2 marg-bot">
+              <input class="form-control" type="number" placeholder=" Severity 1-3" [(ngModel)]="pave_seal_wear_s" name="pave_seal_wear_s" required>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-4">
+              <input id="image" [(ngModel)]="image" name="image" type="file">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
+              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="pave_seal_wear_n" name="pave_seal_wear_n" required></textarea>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pavesealdelam-input" class="col-xs-12 col-sm-12 col-md-12 col-form-label">Pavement Sealer Delamination</label>
+            <div class="col-xs-6 col-sm-6 col-md-2 marg-bot">
+              <input class="form-control" type="number" placeholder=" Severity 1-3" [(ngModel)]="pave_seal_delam_s" name="pave_seal_delam_s" required>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-4">
+              <input id="image" [(ngModel)]="image" name="image" type="file">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
+              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="pave_seal_delam_n" name="pave_seal_delam_n" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="oilspot-input" class="col-xs-12 col-sm-12 col-md-12 col-form-label">Oil Spots</label>
+            <div class="col-xs-6 col-sm-6 col-md-2 marg-bot">
+              <input class="form-control" type="number" placeholder=" Severity 1-3" [(ngModel)]="oil_spots_s" name="oil_spots_s" required>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-4">
+              <input id="image" [(ngModel)]="image" name="image" type="file">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
+              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="oil_spots_n" name="oil_spots_n" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="linearcracks-input" class="col-xs-12 col-sm-12 col-md-12 col-form-label">Linear Cracks</label>
+            <div class="col-xs-6 col-sm-6 col-md-2 marg-bot">
+              <input class="form-control" type="number" placeholder=" Severity 1-3" [(ngModel)]="linear_cracks_s" name="linear_cracks_s" required>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-4">
+              <input id="image" [(ngModel)]="image" name="image" type="file">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
+              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="linear_cracks_n" name="linear_cracks_n" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="gatorcracks-input" class="col-xs-12 col-sm-12 col-md-12 col-form-label">Alligator Cracks</label>
+            <div class="col-xs-6 col-sm-6 col-md-2 marg-bot">
+              <input class="form-control" type="number" placeholder=" Severity 1-3" [(ngModel)]="gator_cracks_s" name="gator_cracks_s" required>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-4">
+              <input id="image" [(ngModel)]="image" name="image" type="file">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
+              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="gator_cracks_n" name="gator_cracks_n" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="pothole-input" class="col-xs-12 col-sm-12 col-md-12 col-form-label">Pot Holes</label>
+            <div class="col-xs-6 col-sm-6 col-md-2 marg-bot">
+              <input class="form-control" type="number" placeholder=" Severity 1-3" [(ngModel)]="pot_holes_s" name="pot_holes_s" required>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-4">
+              <input id="image" [(ngModel)]="image" name="image" type="file">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
+              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="pot_holes_n" name="pot_holes_n" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="raveling-input" class="col-xs-12 col-sm-12 col-md-12 col-form-label">Raveling</label>
+            <div class="col-xs-6 col-sm-6 col-md-2 marg-bot">
+              <input class="form-control" type="number" placeholder=" Severity 1-3" [(ngModel)]="raveling_s" name="raveling_s" required>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-4">
+              <input id="image" [(ngModel)]="image" name="image" type="file">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
+              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="raveling_n" name="raveling_n" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="rutting-input" class="col-xs-12 col-sm-12 col-md-12 col-form-label">Rutting</label>
+            <div class="col-xs-6 col-sm-6 col-md-2 marg-bot">
+              <input class="form-control" type="number" placeholder=" Severity 1-3" [(ngModel)]="rutting_s" name="rutting_s" required>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-4">
+              <input id="image" [(ngModel)]="image" name="image" type="file">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
+              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="rutting_n" name="rutting_n" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group col-md-12">
+          <input type="submit" class="btn btn-primary pull-right" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

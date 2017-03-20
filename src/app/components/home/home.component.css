@@ -1,0 +1,19 @@
+.jumbotron {
+    background-image: url("./assets/img/asphalt4.jpg");
+    background-position: 50% bottom;
+    background-size: cover;
+}
+#jumbo_wording {
+    color: white;
+}
+.well {
+    background: rgba(128,128,128,.35);
+    border: none;
+}
+#swell{
+    padding: 8px;
+    margin: 0;
+}
+a { 
+    cursor: pointer; 
+}

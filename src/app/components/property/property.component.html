@@ -1,0 +1,36 @@
+<div *ngIf="property">
+  <a [routerLink]="['/properties']">Go Back</a>
+  <h2 class="page-header" >{{property.property_name}} <small>{{property.city}}</small>
+  </h2>
+  <div class="row">
+    <div class="col-sm-4 col-md-4">
+      <img style="width:100%" class="thumbnail" src="{{imageUrl}}">
+    </div>
+    <div class="col-sm-8 col-md-8">
+      <h4> Property Information</h4>
+      <ul class="list-group">
+        <li class="list-group-item"> Address: {{property.street_address}}</li>
+        <li class="list-group-item"> City: {{property.city}}</li>
+        <li class="list-group-item"> State: {{property.state}}</li>
+        <li class="list-group-item"> Zip: {{property.zipcode}}</li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col-sm-8 col-md-8">
+        <h4> Contact Information</h4>
+        <ul class="list-group">
+          <li class="list-group-item"> Management Company: {{property.mgmt_company}}</li>
+          <li class="list-group-item"> Contact Name: {{property.cont_name}}</li>
+          <li class="list-group-item"> Job Title: {{property.job_title}}</li>
+          <li class="list-group-item"> Email: {{property.email}}</li>
+          <li class="list-group-item"> Phone: {{property.phone}}</li>
+        </ul>
+      </div>
+    </div>
+
+      <a class="btn btn-default" [routerLink]="['/edit-property/'+property.$key]">Edit</a>
+      <a (click)="onDeleteClick()" class="btn btn-danger">Delete</a>
+
+</div>
