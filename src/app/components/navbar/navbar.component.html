@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav navbar-left">
         <li><a [routerLink]="['/']">Home</a></li>
         <li *ngIf="(af.auth | async)"><a [routerLink]="['/properties']">Properties</a></li>
-        <li *ngIf="(af.auth | async)"><a [routerLink]="['/inspections']">nSpections</a></li>
+        <li *ngIf="(af.auth | async)"><a [routerLink]="['/inspections']">Section Surveys</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="!(af.auth | async)"><a (click)="login()">Login</a></li>

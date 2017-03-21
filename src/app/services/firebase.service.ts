@@ -49,8 +49,11 @@ export class FirebaseService {
   }
 
 
-    getNspections(property:string = null){
-      if(property != null){
+    getNspections(property:any = null){
+      if(property == "0") {
+        this.nspects = this.af.database.list('/nspections') as FirebaseListObservable<Nspect[]>
+      }
+      else if (property != null){
         this.nspects = this.af.database.list('/nspections', {
           query: {
             orderByChild: 'property_name',

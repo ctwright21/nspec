@@ -80,6 +80,6 @@ rutting_n: string;
     this.firebaseService.addNspect(newNspect);
 
     this.router.navigate(['inspections']);
-
   }
+
 }

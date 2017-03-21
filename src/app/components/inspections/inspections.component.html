@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-xs-4 col-sm-4 col-md-6">
-   <button class="btn btn-primary"><a [routerLink]="['/inspect']" style="color: inherit; text-decoration: none">Add nSpec Report</a></button>
+   <button class="btn btn-primary"><a [routerLink]="['/inspect']" style="color: inherit; text-decoration: none">Add nSpec Section Survey</a></button>
   </div>
   <div class="col-sm-6 col-md-6">
    <label> Filter by Property
      <select (change)="filterProperty(filteredProperty.value)" #filteredProperty>
-       <option value="0">Select</option>
-       <option *ngFor="let nspect of nspects" value="{{nspect.property_name}}">{{nspect.property_name}}</option>
+       <option value="0">Show All</option>
+       <option *ngFor="let property of properties" value="{{property.property_name}}">{{property.property_name}}</option>
      </select>
    </label>
   </div>

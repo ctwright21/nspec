@@ -1,3 +1,8 @@
-li { 
-    cursor: pointer; 
+li {
+    cursor: pointer;
+}
+
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
+    background-color: #ffd500;
+    color: black;
 }

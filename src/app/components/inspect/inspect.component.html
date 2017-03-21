@@ -1,14 +1,4 @@
 <div *ngIf="properties">
-  <!--
-  <div class="panel col-xs-12 col-sm-12 col-md-10 ">
-    <div class="panel-heading">
-      <h3 class="panel-title">Properties in the nSpec System</h3>
-    </div>
-    <ul *ngFor="let property of properties">
-      <li>{{property.property_name}}</li>
-    </ul>
-  </div>
--->
 
   <div class="container">
     <div class="col-md-12 well" id="pm_form">
@@ -16,7 +6,7 @@
       <form (submit)="onAddSubmit()">
         <div class="row">
           <div class="form-group col-sm-6 col-md-6">
-            <label class="col-form-label">Completed by: </label>
+            <label class="col-form-label">Surveyor Name: </label>
                 <input class="form-control" type="text" [(ngModel)]="completed_by" name="completed_by">
           </div>
 
@@ -49,11 +39,14 @@
             <div class="col-xs-6 col-sm-6 col-md-2 marg-bot">
               <input class="form-control" type="number" placeholder=" Severity 1-3" [(ngModel)]="pave_seal_wear_s" name="pave_seal_wear_s" required>
             </div>
-            <div class="col-xs-2 col-sm-2 col-md-4">
+            <div class="col-xs-2 col-sm-1 col-md-1">
+              <img src="assets/img/asphalt4.jpg" id="pswimage">
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-3">
               <input id="image" [(ngModel)]="image" name="image" type="file">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
-              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="pave_seal_wear_n" name="pave_seal_wear_n" required></textarea>
+              <textarea class="form-control" cols="40" rows="1" type="text" placeholder="Notes" [(ngModel)]="pave_seal_wear_n" name="pave_seal_wear_n" required></textarea>
             </div>
           </div>
         </div>
@@ -69,7 +62,7 @@
               <input id="image" [(ngModel)]="image" name="image" type="file">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
-              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="pave_seal_delam_n" name="pave_seal_delam_n" required></textarea>
+              <textarea class="form-control" cols="40" rows="2" type="text" placeholder="Notes" [(ngModel)]="pave_seal_delam_n" name="pave_seal_delam_n" required></textarea>
             </div>
           </div>
         </div>
@@ -84,7 +77,7 @@
               <input id="image" [(ngModel)]="image" name="image" type="file">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
-              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="oil_spots_n" name="oil_spots_n" required></textarea>
+              <textarea class="form-control" cols="40" rows="2" type="text" placeholder="Notes" [(ngModel)]="oil_spots_n" name="oil_spots_n" required></textarea>
             </div>
           </div>
         </div>
@@ -99,7 +92,7 @@
               <input id="image" [(ngModel)]="image" name="image" type="file">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
-              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="linear_cracks_n" name="linear_cracks_n" required></textarea>
+              <textarea class="form-control" cols="40" rows="2" type="text" placeholder="Notes" [(ngModel)]="linear_cracks_n" name="linear_cracks_n" required></textarea>
             </div>
           </div>
         </div>
@@ -114,7 +107,7 @@
               <input id="image" [(ngModel)]="image" name="image" type="file">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
-              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="gator_cracks_n" name="gator_cracks_n" required></textarea>
+              <textarea class="form-control" cols="40" rows="2" type="text" placeholder="Notes" [(ngModel)]="gator_cracks_n" name="gator_cracks_n" required></textarea>
             </div>
           </div>
         </div>
@@ -129,7 +122,7 @@
               <input id="image" [(ngModel)]="image" name="image" type="file">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
-              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="pot_holes_n" name="pot_holes_n" required></textarea>
+              <textarea class="form-control" cols="40" rows="2" type="text" placeholder="Notes" [(ngModel)]="pot_holes_n" name="pot_holes_n" required></textarea>
             </div>
           </div>
         </div>
@@ -144,7 +137,7 @@
               <input id="image" [(ngModel)]="image" name="image" type="file">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
-              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="raveling_n" name="raveling_n" required></textarea>
+              <textarea class="form-control" cols="40" rows="2" type="text" placeholder="Notes" [(ngModel)]="raveling_n" name="raveling_n" required></textarea>
             </div>
           </div>
         </div>
@@ -159,7 +152,7 @@
               <input id="image" [(ngModel)]="image" name="image" type="file">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 marg-bot">
-              <textarea class="form-control" cols="40" rows="3" type="text" placeholder="Notes" [(ngModel)]="rutting_n" name="rutting_n" required></textarea>
+              <textarea class="form-control" cols="40" rows="2" type="text" placeholder="Notes" [(ngModel)]="rutting_n" name="rutting_n" required></textarea>
             </div>
           </div>
         </div>
